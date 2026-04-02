@@ -2,10 +2,22 @@
   "name": "RAGFlow Pull Helper",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "hostRequirements": {
-    "memory": "8gb",
-    "cpus": 2,
-    "diskSize": 32
+    "memory": "16gb",
+    "cpus": 8,
+    "diskSize": 128
   },
+  "runArgs": [
+    "--shm-size=16g",
+    "--memory=16g",
+    "--cpus=8"
+  ],
+  "mounts": [
+    {
+      "source": "ragflow-data",
+      "target": "/workspace/data",
+      "type": "volume"
+    }
+  ],
   "customizations": {
     "vscode": {
       "extensions": ["ms-azuretools.vscode-docker"]
