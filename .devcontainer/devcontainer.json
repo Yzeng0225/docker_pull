@@ -4,7 +4,7 @@
   "hostRequirements": {
     "memory": "8gb",
     "cpus": 4,
-    "diskSize": 32
+    "diskSize": "64gb"
   },
   "runArgs": [
     "--shm-size=2g"
